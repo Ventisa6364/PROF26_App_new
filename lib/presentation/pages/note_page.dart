@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:prof26_uikit/prof26_uikit.dart';
+import 'package:prof26_app/presentation/pages/settings_page.dart';
 
 class NotePage extends StatelessWidget {
   const NotePage({super.key});
@@ -69,6 +71,18 @@ class NotePage extends StatelessWidget {
                     ),
                   ),
                 ),
+                GestureDetector(
+                  onTap:  _getToSettings,
+                  child: SizedBox.square(
+                    dimension: 32.r,
+                    child: SvgPicture.asset(
+                      'packages/prof26_uikit/assets/icons/settings.svg',
+                      width: 32.r,
+                      height: 32.r,
+                      colorFilter: .mode(theme.palette.icon, .srcIn),
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
@@ -76,4 +90,6 @@ class NotePage extends StatelessWidget {
       ),
     );
   }
+
+  void _getToSettings() => Get.to(SettingsPage());
 }
