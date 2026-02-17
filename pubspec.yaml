@@ -17,6 +17,12 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   flutter_screenutil: ^5.9.3
+  prof26_uikit:
+    git:
+      url: https://github.com/Ventisa6364/PROF26_UIKit_new
+      ref: main
+
+  flutter_svg: ^2.2.3
 
 dev_dependencies:
   flutter_test:
